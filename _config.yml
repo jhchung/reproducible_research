@@ -9,6 +9,7 @@ permalink:        pretty
 title:            Reproducible Research
 tagline:          'Reproducible research in genetics'
 description:      'Base theme for Jekyll themes by @mdo.'
+url: http://jwbomt.github.io
 baseurl:         reproducible_research
 author:
   name:           'Jonathan Chung'

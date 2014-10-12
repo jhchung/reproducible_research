@@ -1,19 +1,15 @@
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# Site settings
+title: Reproducible Research
+email: jwbomt@gmail.com
+description: "Tips, tricks, and thoughts on reproducible research in genetics and genomics."
+baseurl: "/reproducible_research"
+github_username:  jwbomt
 
-# Setup
-title:            Poole
-tagline:          The Jekyll Butler
-url:              http://getpoole.com
-paginate:         1
-baseurl:          /
-author:
-  name:           Mark Otto
-  url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 5
+exclude: ["node_modules"]
 
-# Custom vars
-version:          1.0.0
-github:
-  repo:           https://github.com/poole/poole
+pages_list:       
+  Archive: '/archive'

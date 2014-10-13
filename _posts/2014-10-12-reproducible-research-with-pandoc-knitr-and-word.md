@@ -16,7 +16,7 @@ I really enjoy using R and LaTeX for creating reports, papers, presentations, an
 
 Normally, I would write LaTeX documents with R code embeded and use `Knitr` to weave everything together into a nice little (or big) pdf, with all of my references, links, figure numbers, tables, TOC.... But converting from LaTeX to `.docx` is a legendary boss that no one has yet defeated.
 
-Thats where pandoc comes in. (Pandoc)[http://johnmacfarlane.net/pandoc/] is a great program that cross converts several document formats. I'm interested in the markdown to Word conversion. It took a lot of work and hair pulling, but I think I've finally figured it out. Using `Knitr`, `rmarkdown`, and pandoc, I can finally get a working `.docx` with references, links, figure numbers, tables... almost everything I need to create a reproducible document.
+Thats where pandoc comes in. [Pandoc](http://johnmacfarlane.net/pandoc/) is a great program that cross converts several document formats. I'm interested in the markdown to Word conversion. It took a lot of work and hair pulling, but I think I've finally figured it out. Using `Knitr`, `rmarkdown`, and pandoc, I can finally get a working `.docx` with references, links, figure numbers, tables... almost everything I need to create a reproducible document.
 
 # How to do it
 
@@ -24,4 +24,6 @@ Thats where pandoc comes in. (Pandoc)[http://johnmacfarlane.net/pandoc/] is a gr
 
 `R`, with the `knitr` and `rmarkdown` packages, pandoc, and Word.
 
-I use the wonderful (Rstudio)[http://www.rstudio.com/] IDE which comes with document generation built in. (See here)[http://rmarkdown.rstudio.com/] for a great guide into using markdown in R.
+I use the wonderful [Rstudio](http://www.rstudio.com/) IDE which comes with document generation built in. [See here](http://rmarkdown.rstudio.com/) for a great guide into using markdown in R.
+
+...still working

@@ -35,7 +35,7 @@ I won't get into a full runthrough of how to write a reproducible document using
 
 One of the key requirements for me was a way to keep track of figure and table numbers. Coming from LaTeX, I was used to using `\label{}` to define a reference marker and `\ref{}` to refer to a marker. So I reated some functions in `R` to emulate these LaTeX commands.
 
-```R
+```r
 #' Functions to create and reference table and figure numbers.
 #'
 #' Takes a named list of markers and their number.
@@ -74,19 +74,13 @@ label <- function(marker_obj, marker_name){
 #' 
 #' @param marker_obj Named \code{list} containing markers and their numbers.
 #' @param marker \code{character} string of marker to reference.
-#' @param insert_link \code{boolean}. Insert reference as a hyperlink. Default
-#'  \code{FALSE}.
 #' @return \code{character} containing marker number or "??" for undefined
 #'  reference.
-ref <- function(marker_obj, marker, insert_link=FALSE){
+ref <- function(marker_obj, marker){
 	output_text <- marker_obj[[marker]]
 	if (is.null(output_text)){
 		output_text <- "??"
 		warning("No marker called ", marker)
-	}
-
-	if (insert_link){
-		output_text <- paste("[", output_text, "](#", marker, ")", sep="")
 	}
 
 	return(output_text)
@@ -124,11 +118,22 @@ Which will produce the following output:
 > For example, as seen in Figure 1, mileage is negatively correlated with car weight.
 
 
+A key feature of this system is that I can create markers and references to supplemental figures that are not normally included in a document like a journal submission.
+
 {% highlight r linenos %}
 ```{r, chunk2}
-label
+marker_list <- label(marker_list, "sup_fig.boring_supplemental_figure")
+makrer_list <- label(marker_list, "sup_fig.a_not_so_boring_figure")
 ```
 {% endhighlight %}
+
+I can then refer to these `markers` in my main text like before. 
+
+    We did some routine but necessary experiments (Figure S`r ref(marker_list, "sup_fig.boring_supplemental_figure")`. We also found some interesting things that didn't quite make the cut (Figure S`r ref(maker_list, "sup_fig.a_not_so_boring_figure")`.
+
+## Whats the catch?
+
+The major things to keep in mind is that you must define a `marker` before your refer to it.
 
 More examples to come.
 

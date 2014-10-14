@@ -6,7 +6,7 @@ baseurl: "/reproducible_research"
 github_username:  jwbomt
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 paginate: 5
 exclude: ["node_modules"]

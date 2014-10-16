@@ -2,7 +2,7 @@
 layout: post
 author: Jonathan Chung
 title: Reproducible research with pandoc, knitr, and word
-header-img: img/grey_block.jpg
+
 ---
 
 # Whats the big idea?

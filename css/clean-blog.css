@@ -147,7 +147,7 @@ hr.small {
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 100px 0 50px;
-  color: white;
+  color: #404040;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -201,7 +201,7 @@ hr.small {
   font-size: 20px;
 }
 .intro-header .post-heading .meta a {
-  color: white;
+  color: #404040;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {

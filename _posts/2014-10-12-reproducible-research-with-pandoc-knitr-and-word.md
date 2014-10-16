@@ -35,7 +35,7 @@ I won't get into a full runthrough of how to write a reproducible document using
 
 One of the key requirements for me was a way to keep track of figure and table numbers. Coming from LaTeX, I was used to using `\label{}` to define a reference marker and `\ref{}` to refer to a marker. So I reated some functions in `R` to emulate these LaTeX commands.
 
-```r
+```{r}
 #' Functions to create and reference table and figure numbers.
 #'
 #' Takes a named list of markers and their number.
